@@ -65,7 +65,7 @@
     </action>
     <action>
       After updating the package, update to xdg-dbus-proxy-0.1.7 and
-      xdg-desktop-portal-1.20.4 from BLFS to fix security vulnerabilties that
+      xdg-desktop-portal-1.20.4 from BLFS to fix security vulnerabilities that
       allow for arbitrary file deletion and application eavesdropping upon
       D-Bus activity.
     </action>
