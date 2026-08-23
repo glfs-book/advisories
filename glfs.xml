@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<book type="glfs">
+
+<bookver ver="13.0">
+
+  <adv type="brk">
+    <topic>OpenCL and Ruby</topic>
+    <date>May 29th, 2026</date>
+    <des>
+      Previously, the book installed OCL-ICD from OCL-Dev for the OpenCL ICD
+      loader. Ruby was required as a result. KhronosGroup has a compatible
+      loader called OpenCL-ICD-Loader. Its only dependencies are CMake and the
+      OpenCL headers. The book has since switched to it and that plus the
+      headers have been moved into a package collection page, like Vulkan-SDK,
+      called OpenCL-SDK.
+    </des>
+    <des>
+      As a consequence, OCL-ICD has been removed and Ruby, having no use in
+      the book, has also been removed. Ruby often sees security releases, so
+      read BLFS for Ruby updates.
+    </des>
+  </adv>
+
+  <adv type="sec">
+    <topic>NVIDIA</topic>
+    <ver>595.58.03</ver>
+    <rate>High</rate>
+    <date>April 7th, 2026</date>
+    <des>
+      Two security vulnerabilities were fixed that could allow
+      for a denial of service (DOS) attack via a kernel crash.
+    </des>
+    <action>
+      Update by following the <ulink
+      url="https://linuxfromscratch.org/glfs/view/dev/core/nvidia.html">
+      NVIDIA installation page</ulink>.
+    </action>
+  </adv>
+
+  <adv type="sec">
+    <topic>NVIDIA</topic>
+    <ver>580.142</ver>
+    <rate>High</rate>
+    <date>March 21st, 2026</date>
+    <des>
+      A security vulnerability was fixed that could allow
+      for a denial of service (DOS) attack via a kernel crash through a NULL
+      pointer dereference. The issue affects the open kernel modules.
+    </des>
+    <action>
+      Update by following the <ulink
+      url="https://linuxfromscratch.org/glfs/view/dev/core/nvidia-r580.html">
+      NVIDIA-r580 installation page</ulink>.
+    </action>
+  </adv>
+
+</bookver>
+
+
+<bookver ver="12.4">
+
+  <adv type="brk">
+    <topic>Pkgconf and Meson</topic>
+    <date>February 24th, 2026</date>
+    <des>
+      The book previously installed files for both Pkgconf and Meson to aid
+      with installing 32-bit variants of packages on 64-bit. Upgrading MLFS
+      revealed that those files would be very useful for packages like Systemd.
+      They have now been moved to MLFS in the Pkgconf and Meson pages in
+      Chapter 8. The Meson files also add a libdir parameter, in which MLFS
+      and GLFS now rely on.
+    </des>
+  </adv>
+
+  <adv type="sec">
+    <topic>NVIDIA</topic>
+    <rate>High</rate>
+    <date>January 28th, 2026</date>
+    <des>
+      590.48.01 and 580.126.09 fixed a security vulnerability that could allow
+      for integer overflows in the <filename>nvidia.ko</filename> kernel
+      module.
+    </des>
+    <id>2025-33219</id>
+    <action>
+      Read <ulink
+      url="https://linuxfromscratch.org/glfs/view/dev/core/nvidia-rev.html">
+      NVIDIA Revisions</ulink> for your driver and update it.
+    </action>
+  </adv>
+
+  <adv type="brk">
+    <topic>NVIDIA</topic>
+    <date>December 23rd, 2025</date>
+    <des>
+      Major version r590 was released, dropping support for pre-Turing NVIDIA
+      GPUs. Since pre-Turing GPUs are still very common, especially for Steam
+      users, the book now includes two NVIDIA and CUDA drivers: r580 and
+      the current NVIDIA major version.
+    </des>
+    <action>
+      Read <ulink
+      url="https://linuxfromscratch.org/glfs/view/dev/core/nvidia-rev.html">
+      NVIDIA Revisions</ulink> for a list of drivers.
+    </action>
+  </adv>
+
+  <adv type="sec">
+    <topic>FFmpeg</topic>
+    <ver>8.0.1</ver>
+    <rate>High</rate>
+    <date>December 4th, 2025</date>
+    <des>
+      Three security vulnerabilities were fixed that could allow for
+      out-of-bounds write operations, use-after-free write operations, and
+      integer overflows.
+    </des>
+    <id>2025-59733</id>
+    <id>2025-59734</id>
+    <id>2025-63757</id>
+    <action>
+      Update by following the <ulink
+      url="https://linuxfromscratch.org/glfs/view/dev/wine/ffmpeg.html">
+      NVIDIA installation page</ulink>.
+    </action>
+  </adv>
+
+  <adv type="brk">
+    <topic>VDPAU</topic>
+    <date>November 24th, 2025</date>
+    <des>
+      Support has been cut from Mesa-25.3, removing all the drivers from Mesa.
+      NVIDIA thus is practically the only way to use it, and NVIDIA can use
+      VA-API via another package, and has the existing CUDA technology. Thus,
+      libvdpau and related packages have been removed. Use VA-API instead.
+    </des>
+  </adv>
+
+  <adv type="sec">
+    <topic>NVIDIA</topic>
+    <ver>580.95.05</ver>
+    <rate>High</rate>
+    <date>October 10th, 2025</date>
+    <des>
+      Eight security vulnerabilities were fixed that could allow for arbitrary
+      code exectution (ACE), denial of service, privilege escalation, data
+      tampering, and information disclosure.
+    </des>
+    <id>2025-23280</id>
+    <id>2025-23282</id>
+    <id>2025-23300</id>
+    <id>2025-23309</id>
+    <id>2025-23330</id>
+    <id>2025-23332</id>
+    <id>2025-23345</id>
+    <id>2025-23347</id>
+    <action>
+      Update by following the <ulink
+      url="https://linuxfromscratch.org/glfs/view/dev/core/nvidia.html">
+      NVIDIA installation page</ulink>.
+    </action>
+  </adv>
+
+  <adv type="brk">
+    <topic>GBM</topic>
+    <date>September 11th, 2025</date>
+    <des>
+      Previously, the book had instructions for installing just the libgbm
+      library from Mesa. Now, it installs a standalone package, called libgbm,
+      with less dependencies and a quicker build time that's up-to-date and
+      ABI+API compatible with Mesa's libgbm. The book now installs it by
+      default and Mesa now uses it. The development version of the book
+      doesn't need any other files from Mesa, making NVIDIA-only a breeze.
+    </des>
+  </adv>
+
+  <adv type="brk">
+    <topic>Mesa OpenGL</topic>
+    <date>September 8th, 2025</date>
+    <des>
+      Mesa's core OpenGL libraries (<filename>libGL</filename>,
+      <filename>libEGL</filename>, etc.) used to be supported. The book was
+      equipped with instructions to choose between either Mesa or libglvnd.
+      Now the book chooses libglvnd by default and Mesa's OpenGL is
+      unsupported. The book still documents options needed to go with Mesa's
+      OpenGL libraries, however.
+    </des>
+  </adv>
+
+  <adv type="brk">
+    <topic>PCRE2, SQLite3, Python3</topic>
+    <date>September 4th, 2025</date>
+    <des>
+      These packages have been moved to LFS and Multilib LFS.
+    </des>
+  </adv>
+
+</bookver>
+
+
+<bookver ver="12.3">
+
+  <adv type="brk">
+    <topic>xcb-util-errors</topic>
+    <date>August 17th, 2025</date>
+    <des>
+      The package has been moved to Supplemental LFS. No packages in GLFS use
+      it.
+    </des>
+  </adv>
+
+  <adv type="sec">
+    <topic>Fontconfig</topic>
+    <ver>2.17.1</ver>
+    <rate>Medium</rate>
+    <date>July 3rd, 2025</date>
+    <des>
+      A heap buffer overflow was fixed that when the package is compiled with
+      sanitized addresses, it will cause <command>fc-cache</command> to bail
+      when using the <option>-f</option> option when generating the font cache.
+      If a font is malformed as a result of the bail, Steam will crash.
+      Fontconfig-2.16.x is not affected.
+    </des>
+    <action>
+      Either stay on Fontconfig-2.16.x or update by following the <ulink
+      url="https://linuxfromscratch.org/glfs/view/dev/core/fontconfig.html">
+      Fontconfig installation page</ulink>.
+    </action>
+  </adv>
+
+  <adv type="sec">
+    <topic>NVIDIA</topic>
+    <ver>575.64</ver>
+    <rate>High</rate>
+    <date>June 21st, 2025</date>
+    <des>
+      A vulnerability was fixed that could allow for a use-after-free operation
+      in the kernel for pre-Turing NVIDIA GPUs.
+    </des>
+    <des>
+      The latest r570, r565, and r560 releases fix this vulnerability.
+    </des>
+    <action>
+      Update by following the <ulink
+      url="https://linuxfromscratch.org/glfs/view/dev/core/nvidia.html">
+      NVIDIA installation page</ulink>.
+    </action>
+  </adv>
+
+  <adv type="sec">
+    <topic>libxml2</topic>
+    <ver>2.14.4</ver>
+    <rate>High</rate>
+    <date>June 21st, 2025</date>
+    <des>
+      A vulnerability was fixed that could allow for exploitation in the
+      xmlBuildQName() function, used most in GLFS by Wine. If you're
+      on libxml2-1.13, install libxml2-1.13.8 with <ulink
+      url="https://linuxfromscratch.org/patches/downloads/libxml2/libxml2-2.13.8-security_fixes-1.patch">
+      this patch</ulink>.
+    </des>
+    <action>
+      Update by following the <ulink
+      url="https://linuxfromscratch.org/glfs/view/dev/core/libxml2.html">
+      libxml2 installation page</ulink>.
+    </action>
+  </adv>
+
+  <adv type="brk">
+    <topic>AMDGPU PRO</topic>
+    <date>June 18th, 2025</date>
+    <des>
+      AMDGPU PRO has been removed from GLFS and there are no plans for it to
+      return. Replace the AMDGPU PRO stack with libva, libvdpau, and Mesa.
+    </des>
+  </adv>
+
+  <adv type="brk">
+    <topic>seatd</topic>
+    <date>June 10th, 2025</date>
+    <des>
+      seatd has been removed from GLFS and has been moved to Supplemental LFS.
+      No packages in GLFS use seatd. Originally, it was added in a time when
+      SLFS (originally LFS-QOL) did not exist. But now it exists to offload
+      such packages, so it got moved.
+    </des>
+  </adv>
+
+  <adv type="brk">
+    <topic>Git</topic>
+    <date>June 10th, 2025</date>
+    <des>
+      Git has been removed from GLFS. All downloading instructions now rely on
+      the Wget or cURL packages when pages instruct the user to download files
+      in bulk. No package in GLFS depends on Git otherwise, and no lib32
+      installation instructions have been present for it as the package does
+      not provide libraries. Follow BLFS for updates to Git.
+    </des>
+  </adv>
+
+  <adv type="brk">
+    <topic>libxml2</topic>
+    <ver>2.14.x</ver>
+    <date>April 3rd, 2025</date>
+    <des>
+      libxml2-2.13 has upgraded to libxml2-2.14, which has broken ABI. While
+      you can reinstall every package that uses libxml2, or do a complete
+      upgrade, you can instead opt to apply patches which fix security issues
+      without breaking ABI. The patches will be linked in the BLFS advisories.
+    </des>
+  </adv>
+
+  <adv type="brk">
+    <topic>32-bit CPU Support</topic>
+    <date>March 25th, 2025</date>
+    <des>
+      Support for 32-bit CPUs (ix86) has been removed from GLFS. This is
+      because there is no testing being done for 32-bit by the GLFS development
+      team due to lack of proper hardware. Another big reason is Steam and its
+      CEF sandboxing is unclear on how to properly bypass and what happens
+      beyond that point. Regardless, beyond Steam, the normal installation
+      instructions generally work on 32-bit hardware; you just will be on your
+      own to work around the edge cases.
+    </des>
+  </adv>
+
+  <adv type="brk">
+    <topic>luit</topic>
+    <date>March 5th, 2025</date>
+    <des>
+      The luit package has been removed from GLFS as no packages in the book
+      used it. It had no lib32 installation instructions, so feel free to
+      follow BLFS for updates to the luit package.
+    </des>
+  </adv>
+
+</bookver>
+
+
+</book>
