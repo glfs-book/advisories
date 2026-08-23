@@ -138,11 +138,11 @@
 </xsl:template>
 
 <xsl:template match="bold">
- <b><xsl:apply-templates/></b>
+  <b><xsl:apply-templates/></b>
 </xsl:template>
 
 <xsl:template match="italic">
- <em><xsl:apply-templates/></em>
+  <em><xsl:apply-templates/></em>
 </xsl:template>
 
 <xsl:template match="ulink">
