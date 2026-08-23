@@ -16,6 +16,13 @@
     This page covers advisories, notably in relation with security and changes
     that may have broken earlier versions of the book.
   </p>
+  <p>
+    Sometimes, not every security vulnerability for an advisory will be
+    available. Sometimes, upstream does not issue an ID with security
+    authority, like a CVE. Sometimes, they don't wish to talk about the
+    vulnerability in detail. What's listed is all that can be gathered from
+    upstream and GitHub/Mitre/NVD.
+  </p>
   <xsl:if test="/book/@type='glfs'">
   <p>
     For security, most of the packages in GLFS are in BLFS, and GLFS for the
@@ -51,6 +58,14 @@
       <xsl:for-each select="action">
         <p><xsl:apply-templates select="."/></p>
       </xsl:for-each>
+      <xsl:if test="update">
+        <p>
+          <b>Updated on <xsl:apply-templates select="update"/>. </b>
+          <xsl:if test="reason">
+            <b>Reason: <xsl:apply-templates select="reason"/>.</b>
+          </xsl:if>
+        </p>
+      </xsl:if>
     </xsl:for-each>
     <xsl:if test="adv[@type='sec']">
       <h3>Security Advisories</h3>
@@ -75,14 +90,14 @@
       <xsl:when test="id">
         <p>Assigned vulnerabilities:
         <xsl:for-each select="id">
-          <xsl:sort select="id"/>
           <xsl:choose>
             <xsl:when test="@type='gh'">
               <a href="https://github.com/{@prefix}advisories/GHSA-{.}">
                 GHSA-<xsl:value-of select="."/></a><xsl:choose>
                 <xsl:when
-                test="last() - position() = 1">, and </xsl:when>
-                <xsl:when
+                test="last() - position() = 1"><xsl:choose><xsl:when
+                test="last() = 2"></xsl:when><xsl:otherwise>,</xsl:otherwise></xsl:choose>
+                and </xsl:when><xsl:when
                 test="last() - position() = 0"></xsl:when>
                 <xsl:otherwise>, </xsl:otherwise></xsl:choose>
             </xsl:when>
@@ -90,8 +105,9 @@
               <a href="https://nvd.nist.gov/vuln/detail/CVE-{.}">
                 CVE-<xsl:value-of select="."/></a><xsl:choose>
                 <xsl:when
-                test="last() - position() = 1">, and </xsl:when>
-                <xsl:when
+                test="last() - position() = 1"><xsl:choose><xsl:when
+                test="last() = 2"></xsl:when><xsl:otherwise>,</xsl:otherwise></xsl:choose>
+                and </xsl:when><xsl:when
                 test="last() - position() = 0"></xsl:when>
                 <xsl:otherwise>, </xsl:otherwise></xsl:choose>
             </xsl:otherwise>
@@ -106,11 +122,27 @@
       <xsl:for-each select="action">
         <p><xsl:apply-templates select="."/></p>
       </xsl:for-each>
+      <xsl:if test="update">
+        <p><em>
+          Updated on <xsl:value-of select="normalize-space(update)"/>.
+          <xsl:if test="reason">
+            Reason: (<xsl:value-of select="normalize-space(reason)"/>).
+          </xsl:if>
+        </em></p>
+      </xsl:if>
     </xsl:for-each>
     <br/>
   </xsl:for-each>
 </body>
 </html>
+</xsl:template>
+
+<xsl:template match="bold">
+ <b><xsl:apply-templates/></b>
+</xsl:template>
+
+<xsl:template match="italic">
+ <em><xsl:apply-templates/></em>
 </xsl:template>
 
 <xsl:template match="ulink">

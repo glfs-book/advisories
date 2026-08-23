@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<book type="slfs">
+
+<bookver ver="13.0">
+
+  <adv type="sec">
+    <topic>Go</topic>
+    <ver>1.26.2</ver>
+    <rate>Critical</rate>
+    <date>April 8th, 2026</date>
+    <update>April 18th, 2026</update>
+    <reason>
+      Rating: High -&gt; Critical
+    </reason>
+    <des>
+      Ten security vulnerabilities were fixed that could allow for the
+      unconditional symlink following, incorrect tracking of JavaScript
+      template literal contexts, improper applying of excluded DNS constraints
+      in certificates to wildcard domains, bypassal of overlap checking for
+      no-op interface conversions, possible memory corription, unbounded
+      allocation, connection deadlocks, trust layer bypassal, and denial of
+      service (DOS). Multiple Go components are affected.
+    </des>
+    <id>2026-27140</id>
+    <id>2026-27143</id>
+    <id>2026-27144</id>
+    <id>2026-32280</id>
+    <id>2026-32281</id>
+    <id>2026-32282</id>
+    <id>2026-32283</id>
+    <id>2026-32288</id>
+    <id>2026-32289</id>
+    <id>2026-33810</id>
+    <action>
+      Update <bold>immediately</bold> by following the <ulink
+      url="https://linuxfromscratch.org/slfs/view/dev/general/go.html">
+      Go installation page</ulink>, and reinstall everything that was built
+      with or against the package.
+    </action>
+  </adv>
+
+  <adv type="sec">
+    <topic>Flatpak</topic>
+    <ver>1.16.5</ver>
+    <rate>Critical</rate>
+    <date>April 8th, 2026</date>
+    <update>April 15th, 2026</update>
+    <reason>
+      included information regarding updating xdg-desktop-portal and
+      xdg-dbus-proxy
+    </reason>
+    <des>
+      Four security vulnerabilities were fixed that could allow for a complete
+      and total sandbox escape, arbitrary file deletion on the host filesystem,
+      arbitrary read access to files in the system-helper context, and
+      orphaning cross-user pull operations. The arbitrary file deletion
+      vulnerability has no restrictions and any app can exploit it or be
+      exploited to do it.
+    </des>
+    <action>
+      To protect your data, it is <italic>highly</italic> recommended to update
+      <bold>immediately</bold> by following the <ulink
+      url="https://linuxfromscratch.org/slfs/view/dev/general/flatpak.html">
+      Flatpak installation page</ulink>.
+    </action>
+    <action>
+      After updating the package, update to xdg-dbus-proxy-0.1.7 and
+      xdg-desktop-portal-1.20.4 from BLFS to fix security vulnerabilties that
+      allow for arbitrary file deletion and application eavesdropping upon
+      D-Bus activity.
+    </action>
+  </adv>
+
+  <adv type="sec">
+    <topic>NGINX</topic>
+    <ver>1.29.8</ver>
+    <rate>Medium</rate>
+    <date>April 8th, 2026</date>
+    <des>
+      A security vulnerability was fixed that could allow for an integer
+      underflow while processing character sets when using the
+      <command>ngx_http_upstream_copy_content_type()</command> function.
+      This is considered as an out-of-bounds memory access vulnerability
+      and can lead to a denial of service (DOS) or information disclosure.
+    </des>
+    <action>
+      Update by following the <ulink
+      url="https://linuxfromscratch.org/slfs/view/dev/servers/nginx.html">
+      NGINX installation page</ulink>.
+    </action>
+  </adv>
+
+  <adv type="sec">
+    <topic>NGINX</topic>
+    <ver>1.29.7</ver>
+    <rate>High</rate>
+    <date>April 7th, 2026</date>
+    <des>
+      Six security vulnerabilities were fixed that could allow for buffer
+      overflows, NULL pointer dereferences, arbitrary header injection, and
+      OCSP (Online Certificate Status Protocol) result bypassing in the
+      <filename>ngx_http_dav_module</filename> and
+      <filename>ngx_http_mp4_module</filename> modules, while using CRAM-MD5 or
+      APOP, and within <filename>auth_http</filename>,
+      <filename>stream</filename>, and <filename>XCLIENT</filename>.
+    </des>
+    <id>2026-27651</id>
+    <id>2026-27654</id>
+    <id>2026-27784</id>
+    <id>2026-28753</id>
+    <id>2026-28755</id>
+    <id>2026-32647</id>
+    <action>
+      Update by following the <ulink
+      url="https://linuxfromscratch.org/slfs/view/dev/servers/nginx.html">
+      NGINX installation page</ulink>.
+    </action>
+  </adv>
+
+  <adv type="sec">
+    <topic>Capstone</topic>
+    <ver>5.0.7</ver>
+    <rate>Critical</rate>
+    <date>April 7th, 2026</date>
+    <des>
+      Two security vulnerabilities were fixed that could allow for a heap
+      buffer overflow and stack buffer overflow and underflow.
+    </des>
+    <id>2025-67873</id>
+    <id>2025-68114</id>
+    <action>
+      Update <bold>immediately</bold> by following the <ulink
+      url="https://linuxfromscratch.org/slfs/view/dev/general/capstone.html">
+      Capstone installation page</ulink>.
+    </action>
+  </adv>
+
+  <adv type="sec">
+    <topic>OBS-Studio</topic>
+    <ver>32.1.0</ver>
+    <rate>High</rate>
+    <date>April 7th, 2026</date>
+    <des>
+      General security was improved for configurations using browser sources
+      which use local files.
+    </des>
+    <action>
+      If you use browser sources using local files, update by following the
+      <ulink
+      url="https://linuxfromscratch.org/slfs/view/dev/graph/obs-studio.html">
+      OBS-Studio installation page</ulink>.
+    </action>
+  </adv>
+
+  <adv type="sec">
+    <topic>tornado</topic>
+    <ver>6.5.5</ver>
+    <rate>High</rate>
+    <date>March 21st, 2026</date>
+    <des>
+      Two security vulnerabilities were fixed that could allow for a denial of
+      service (DOS) attack and incomplete validation of cookie attributes.
+    </des>
+    <id type="gh">qjxf-f2mg-c6mc</id>
+    <id type="gh">78cv-mqj4-43f7</id>
+    <action>
+      Update by following the <ulink
+      url="https://linuxfromscratch.org/slfs/view/dev/general/python-dependencies.html#tornado">
+      tornado installation page</ulink>.
+    </action>
+  </adv>
+
+</bookver>
+
+<bookver ver="12.4">
+
+  <adv type="sec">
+    <topic>yt-dlp</topic>
+    <ver>2026.02.21</ver>
+    <rate>High</rate>
+    <date>February 24th, 2026</date>
+    <des>
+      A security vulnerability was fixed that could allow for code injection
+      via a crafted link using the <option>--netrc-cmd</option> option. This
+      works by pushing special characters to the shell outside of Python,
+      like Bash or Zsh, which in turn allows for ACI.
+    </des>
+    <action>
+      If you use the <option>--netrc-cmd</option> option, or use scripts that
+      do use the <option>--netrc-cmd</option> option, it is highly recommended
+      to update <bold>immediately</bold> by following the <ulink
+      url="https://linuxfromscratch.org/slfs/view/dev/general/yt-dlp.html">
+      yt-dlp installation page</ulink>.
+    </action>
+  </adv>
+
+  <adv type="sec">
+    <topic>OpenJDK</topic>
+    <ver>17.0.18</ver>
+    <rate>High</rate>
+    <date>January 28th, 2026</date>
+    <des>
+      Four security vulnerabilities were fixed that could allow for denial of
+      service (DOS) attacks and modification of data, both critical and Java
+      data. These attacks require network access and for the attacker to go
+      through mutliple protocols, but don't require human interaction. Some
+      of the vulnerabilities are easy to exploit, while the others are more
+      difficult. These vulnerabilities are actively exploited in the wild, like
+      with Minecraft servers.
+    </des>
+    <action>
+      It is highly recommended to update <bold>immediately</bold> by following
+      the <ulink
+      url="https://linuxfromscratch.org/slfs/view/dev/general/openjdk.html">
+      OpenJDK installation page</ulink>.
+    </action>
+  </adv>
+
+  <adv type="brk">
+    <topic>GNAT/GCC-Ada</topic>
+    <date>January 17th, 2026</date>
+    <des>
+      This package, which contains all Ada support in the book, has been
+      removed. BLFS nor GLFS provide a replacement. None of the books need or
+      really benefit from Ada, and its installation, with conflicts with BLFS,
+      was unsafe to install as it could break the toolchain.
+    </des>
+  </adv>
+
+  <adv type="sec">
+    <topic>CDE</topic>
+    <ver>2.5.3</ver>
+    <rate>High</rate>
+    <date>January 7th, 2026</date>
+    <des>
+      There were numerous other improvements, but there were also multiple
+      memory safety issues that were fixed.
+    </des>
+    <action>
+      The sensitive nature of these bugs results in heavy recommendation to
+      update by following the <ulink
+      url="https://linuxfromscratch.org/slfs/view/dev/wm/cde-de.html">
+      CDE installation page</ulink>.
+    </action>
+  </adv>
+
+  <adv type="sec">
+    <topic>i3</topic>
+    <ver>4.25</ver>
+    <rate>High</rate>
+    <date>December 30th, 2025</date>
+    <des>
+      There were general code improvements, along with a memory leak and
+      use-after-free fix.
+    </des>
+    <action>
+      Update by following the <ulink
+      url="https://linuxfromscratch.org/slfs/view/dev/wm/i3-wm.html">
+      i3 installation page</ulink>.
+    </action>
+  </adv>
+
+  <adv type="sec">
+    <topic>tornado</topic>
+    <ver>6.5.3</ver>
+    <rate>High</rate>
+    <date>December 15th, 2025</date>
+    <des>
+      Three security vulnerabilities were fixed that could allow for 
+      header injection, cross-site scription, and denial of service (DOS)
+      attacks.
+    </des>
+    <id>2025-67724</id>
+    <id>2025-67725</id>
+    <id>2025-67726</id>
+    <action>
+      Update by following the <ulink
+      url="https://linuxfromscratch.org/slfs/view/dev/general/python-dependencies.html#tornado">
+      tornado installation page</ulink>.
+    </action>
+  </adv>
+
+  <adv type="sec">
+    <topic>Mbed-TLS</topic>
+    <ver>3.6.5</ver>
+    <rate>Medium</rate>
+    <date>December 15th, 2025</date>
+    <des>
+      Two security vulnerabilities were fixed that could allow for
+      partial recovery of CBC-PKCS7-encrypted plaintext and private key
+      material disclosure.
+    </des>
+    <id>2025-54764</id>
+    <id>2025-59438</id>
+    <action>
+      Update by following the <ulink
+      url="https://linuxfromscratch.org/slfs/view/dev/general/mbedtls.html">
+      Mbed-TLS installation page</ulink>.
+    </action>
+  </adv>
+
+  <adv type="brk">
+    <topic>nv-codec-headers (ffnvcodec) and CUDA</topic>
+    <date>November 24th, 2025</date>
+    <des>
+      These packages have been moved to GLFS to coincide with the NVIDIA driver
+      installation.
+    </des>
+    <action>
+      You can track updates via the <ulink
+      url="https://linuxfromscratch.org/glfs/view/dev/shareddeps/drivers-nvidia.html">
+      GLFS Graphics Drivers - NVIDIA</ulink> page.
+    </action>
+  </adv>
+
+  <adv type="brk">
+    <topic>SDL3</topic>
+    <date>November 18th, 2025</date>
+    <des>
+      The book no longer provides SDL3 nor sdl2-compat as BLFS has now took
+      them in. It started off as a showcase of what the instructions could
+      look like, to becoming necessary in the dependency chain for the book.
+      BLFS decided that it's time to bring the two packages in, so the book
+      links to the pages from BLFS. GLFS has done the same as BLFS.
+    </des>
+  </adv>
+
+  <adv type="sec">
+    <topic>OpenJDK</topic>
+    <ver>17.0.17-ga</ver>
+    <rate>High</rate>
+    <date>October 23rd, 2025</date>
+    <des>
+      Two security vulnerabilities were fixed that could allow for exploitation
+      of APIs via multiple network protocols, leading to creation,
+      modification, and deletion of data. This is especially an issue with
+      Minecraft servers, as an affected JDK version will have elevated
+      privileges because of calls to mods/modpacks. These vulnerabilities
+      affect other major JDK versions. If you have multiple OpenJDK versions
+      built, update all of them if there is an update present.
+    </des>
+    <id>2025-53057</id>
+    <id>2025-53066</id>
+    <action>
+      Update by following the <ulink
+      url="https://linuxfromscratch.org/slfs/view/dev/general/openjdk.html">
+      OpenJDK installation page</ulink>.
+    </action>
+  </adv>
+
+</bookver>
+
+</book>
