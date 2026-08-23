@@ -33,7 +33,7 @@ This will generate HTML files, but they aren't moved or copied anywhere.
 If you don't have `make`, run this instead:
 ```Bash
 for filename in $(find . -name "*.xml"); do
-  book=${package%.xml}
+  book=${filename%.xml}
   xsltproc -o "$book".html lfs.xsl $filename
   tidy -config tidy.conf "$book".html
 done
