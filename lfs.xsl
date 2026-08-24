@@ -7,8 +7,11 @@
 
 <xsl:template match="/">
 <html>
+<head>
 <title><xsl:value-of select="translate(book/@type, $smallcase, $uppercase)"/>
        Advisories</title>
+<link rel="stylesheet" type="text/css" href="lfs.css"/>
+</head>
 <body>
   <h1><xsl:value-of select="translate(book/@type, $smallcase, $uppercase)"/> Advisories</h1>
   <h2>Introduction</h2>

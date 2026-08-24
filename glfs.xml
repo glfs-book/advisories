@@ -252,8 +252,8 @@
     <date>June 21st, 2025</date>
     <des>
       A vulnerability was fixed that could allow for exploitation in the
-      xmlBuildQName() function, used most in GLFS by Wine. If you're
-      on libxml2-1.13, install libxml2-1.13.8 with <ulink
+      <command>xmlBuildQName()</command> function, used most in GLFS by Wine.
+      If you're on libxml2-1.13, install libxml2-1.13.8 with <ulink
       url="https://linuxfromscratch.org/patches/downloads/libxml2/libxml2-2.13.8-security_fixes-1.patch">
       this patch</ulink>.
     </des>
