@@ -14,6 +14,10 @@ user-friendly, as an example, similar to the current system LFS+BLFS employs.
 IDs are automatically resolved but are not created when writing the XML, only
 when transforming the XML.
 
+You can read the generated HTML files online.
+- GLFS: https://glfs-book.github.io/advisories/glfs.html
+- SLFS: https://glfs-book.github.io/advisories/slfs.html
+
 ## Transforming the XML
 
 This repository supports transforming the XML into HTML.
