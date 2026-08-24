@@ -32,6 +32,12 @@
     hardest.
   </p>
   </xsl:if>
+  <p>
+    This page was generated from an XML file with XSLT processing. You can
+    easily track updates and view the XML by viewing the <a
+    href="https://github.com/glfs-book/advisories">
+    advisories GitHub repository</a>.
+  </p>
   <p><em>
     This page is ordered like the Changelog of the book, with newest items
     first.
@@ -91,7 +97,7 @@
         <p>Assigned vulnerabilities:
         <xsl:for-each select="id">
           <xsl:choose>
-            <xsl:when test="@type='gh'">
+            <xsl:when test="@type='ghsa'">
               <a href="https://github.com/{@prefix}advisories/GHSA-{.}">
                 GHSA-<xsl:value-of select="."/></a><xsl:choose>
                 <xsl:when

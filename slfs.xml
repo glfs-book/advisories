@@ -4,6 +4,202 @@
 <bookver ver="13.0">
 
   <adv type="sec">
+    <topic>tornado</topic>
+    <ver>6.5.7</ver>
+    <rate>High</rate>
+    <date>July 14th, 2026</date>
+    <des>
+      Six security vulnerabilities were fixed that could allow for auth and
+      cookie headers being part of the request when following redirects to
+      different origins, denial of service (DOS) attacks, out-of-bounds
+      read operations,  improper reponse parsing, credential reuse, and
+      unlimited memory consumption.
+    </des>
+    <id type="ghsa">3x9g-8vmp-wqvf</id>
+    <id type="ghsa">mgf9-4vpg-hj56</id>
+    <id type="ghsa">cx3h-4qpv-8hc9</id>
+    <id type="ghsa">pw6j-qg29-8w7f</id>
+    <action>
+      Update by following the <ulink
+      url="https://linuxfromscratch.org/slfs/view/dev/general/python-dependencies.html#tornado">
+      tornado installation page</ulink>.
+    </action>
+  </adv>
+
+  <adv type="sec">
+    <topic>Capstone</topic>
+    <ver>5.0.9</ver>
+    <rate>Medium</rate>
+    <date>July 14th, 2026</date>
+    <des>
+      Three security vulnerabilities were fixed that could allow for
+      out-of-bounds read operations, denial of service (DOS) attacks,
+      no-progression disassembly, parser desynchronization, and NULL pointer
+      dereferences.
+    </des>
+    <id type="ghsa" prefix="capstone-engine/capstone/security/">289w-cm54-fgrm</id>
+    <id type="ghsa" prefix="capstone-engine/capstone/security/">5m9f-vqcm-g5pr</id>
+    <id type="ghsa" prefix="capstone-engine/capstone/security/">jrw4-wj52-2vw8</id>
+    <action>
+      Update by following the <ulink
+      url="https://linuxfromscratch.org/slfs/view/dev/general/capstone.html">
+      Capstone installation page</ulink>.
+    </action>
+  </adv>
+
+  <adv type="sec">
+    <topic>Go</topic>
+    <ver>1.26.3</ver>
+    <rate>High</rate>
+    <date>June 1st, 2026</date>
+    <des>
+      Eleven security vulnerabilities were fixed that could allow for checksum
+      bypassing, query forwarding to unexpected locations, denial of service
+      (DOS) conditions, symlink overwriting, extraction of files to arbitrary
+      locations, and cross-site scripting. These affect multiple components.
+    </des>
+    <id>2026-33811</id>
+    <id>2026-33814</id>
+    <id>2026-39817</id>
+    <id>2026-39819</id>
+    <id>2026-39820</id>
+    <id>2026-39823</id>
+    <id>2026-39825</id>
+    <id>2026-39826</id>
+    <id>2026-39836</id>
+    <id>2026-42499</id>
+    <id>2026-42501</id>
+    <action>
+      Update by following the <ulink
+      url="https://linuxfromscratch.org/slfs/view/dev/general/go.html">
+      Go installation page</ulink>, and reinstall everything that was built
+      with or against the package.
+    </action>
+  </adv>
+
+  <adv type="sec">
+    <topic>NGINX</topic>
+    <ver>1.31.1</ver>
+    <rate>Critical</rate>
+    <date>May 29th, 2026</date>
+    <des>
+      Seven security vulnerabilities were fixed that could allow for buffer
+      overflows, overreads, HTTP/3 address spoofing, use-after-free operations,
+      and HTTP/2 request injections. The
+      <filename>ngx_http_charset_module</filename>,
+      <filename>ngx_http_rewrite_module</filename>,
+      <filename>ngx_http_scgi_module</filename>, and
+      <filename>ngx_http_uwsgi_module</filename> modules are affected.
+      The OCSP (Online Certificate Status Protocol) resolver is also affected.
+    </des>
+    <des>
+      Remote code execution alongside arbitrary code execution (RCE and ACE)
+      are possible via these vulnerabilities, but requires ALSR must be
+      disabled on systems hosting the NGINX instance(s). The attacker must be
+      in a circumstance to be able to bypass ALSR in order to achieve ACE/RCE.
+      Enabling ALSR can fix this, alongside updating the package.
+    </des>
+    <id>2026-9256</id>
+    <id>2026-40460</id>
+    <id>2026-40701</id>
+    <id>2026-42926</id>
+    <id>2026-42934</id>
+    <id>2026-42945</id>
+    <id>2026-42946</id>
+    <action>
+      Update <bold>immediately</bold> by following the <ulink
+      url="https://linuxfromscratch.org/slfs/view/dev/servers/nginx.html">
+      NGINX installation page</ulink>. 
+    </action>
+  </adv>
+
+  <adv type="sec">
+    <topic>pycurl</topic>
+    <ver>7.46.0</ver>
+    <rate>High</rate>
+    <date>May 9th, 2026</date>
+    <des>
+      Five security vulnerabilities were fixed that could allow for memory and
+      lock leakage, use-after-free operations, and long overflows.
+    </des>
+    <action>
+      Update by following the <ulink
+      url="https://linuxfromscratch.org/slfs/view/dev/general/python-dependencies.html#pycurl">
+      pycurl installation page</ulink>.
+    </action>
+  </adv>
+
+  <adv type="sec">
+    <topic>asio</topic>
+    <ver>1-38-0</ver>
+    <rate>High</rate>
+    <date>April 19th, 2026</date>
+    <update>April 30th, 2026</update>
+    <reason>corrected the link to the asio page</reason>
+    <des>
+      Two security vulnerabilities were fixed that could allow for denial of
+      service (DOS) attacks via memory and resource leakage.
+    </des>
+    <action>
+      Update by following the <ulink
+      url="https://linuxfromscratch.org/slfs/view/dev/general/asio.html">
+      asio installation page</ulink>. Every package that uses the package must
+      be reinstalled since the package is header-only.
+    </action>
+  </adv>
+
+  <adv type="sec">
+    <topic>Mbed-TLS</topic>
+    <ver>3.6.6</ver>
+    <rate>Critical</rate>
+    <date>April 8th, 2026</date>
+    <des>
+      Eleven security vulnerabilities were fixed that could allow for client
+      impersonation, entropy fallback to <filename>/dev/urandom</filename>,
+      PSA random generator cloning, compiler-induced constant-time violations,
+      arbitrary code execution (ACE), memory corruption, signature algorithm
+      injection, out-of-bounds read operations, information disclosure,
+      insufficient protection of serialized session/context data, and a buffer
+      underread operation.
+    </des>
+    <id>2026-25833</id>
+    <id>2026-25834</id>
+    <id>2026-25835</id>
+    <id>2026-34871</id>
+    <id>2026-34872</id>
+    <id>2026-34873</id>
+    <id>2026-34874</id>
+    <id>2026-34875</id>
+    <id>2026-34876</id>
+    <id>2026-34877</id>
+    <id>2025-66442</id>
+    <action>
+      Update <bold>immediately</bold> by following the <ulink
+      url="https://linuxfromscratch.org/slfs/view/dev/general/mbedtls.html">
+      Mbed-TLS installation page</ulink>.
+    </action>
+  </adv>
+
+  <adv type="sec">
+    <topic>libdatachannel</topic>
+    <ver>0.24.2</ver>
+    <rate>Medium</rate>
+    <date>April 8th, 2026</date>
+    <des>
+      A security vulnerability was fixed that could allow for denial of service
+      (DOS) and potential arbitrary code execution (ACE) when processing RTP
+      and RTCP packets. These issues were caused by a lack of size checks on
+      untrusted input. 
+    </des>
+    <action>
+      Update by following the <ulink
+      url="https://linuxfromscratch.org/slfs/view/dev/general/libdatachannel.html">
+      libdatachannel installation page</ulink>. Only OBS-Studio uses this package
+      in SLFS and BLFS.
+    </action>
+  </adv>
+
+  <adv type="sec">
     <topic>Go</topic>
     <ver>1.26.2</ver>
     <rate>Critical</rate>
@@ -161,8 +357,8 @@
       Two security vulnerabilities were fixed that could allow for a denial of
       service (DOS) attack and incomplete validation of cookie attributes.
     </des>
-    <id type="gh">qjxf-f2mg-c6mc</id>
-    <id type="gh">78cv-mqj4-43f7</id>
+    <id type="ghsa">qjxf-f2mg-c6mc</id>
+    <id type="ghsa">78cv-mqj4-43f7</id>
     <action>
       Update by following the <ulink
       url="https://linuxfromscratch.org/slfs/view/dev/general/python-dependencies.html#tornado">
