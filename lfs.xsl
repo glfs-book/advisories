@@ -17,7 +17,8 @@
   <h2>Introduction</h2>
   <p>
     This page covers advisories, notably in relation with security and changes
-    that may have broken earlier versions of the book.
+    that may have broke or changed how things are done in earlier versions of
+    the book.
   </p>
   <p>
     Sometimes, not every security vulnerability for an advisory will be
@@ -48,7 +49,7 @@
   <xsl:for-each select="book/bookver">
     <h2><xsl:value-of select="@ver"/></h2>
     <xsl:if test="adv[@type='brk']">
-      <h3>Broken Changes</h3>
+      <h3>Breaking Changes</h3>
     </xsl:if>
     <xsl:for-each select="adv[@type='brk']">
       <h4 id="{/book/@type}-{@type}-{../@ver}-{format-number(last() - position() + 1, '000')}"><xsl:value-of
