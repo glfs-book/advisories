@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>
+      Advisories
+    </title>
+    <link rel="stylesheet" type="text/css" href="lfs.css">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  </head>
+  <body>
+    <h1>
+      Advisories
+    </h1>
+    <h2>
+      Introduction
+    </h2>
+    <p>
+      This site hosts advisories for a collection of LFS books, which are
+      generated from XML. This site doesn't host the XML, but instead HTML
+      that has been transformed via XSLT from the XML.
+    </p>
+    <p>
+      Currently supported books:
+    </p>
+    <ul>
+      <li>
+        <b>Gaming Linux From Scratch</b>
+      </li>
+      <li>
+        <b>Supplemental Linux From Scratch</b>
+      </li>
+    </ul>
+    <p>
+      The XML the advisories are written in is hosted <a href=
+      "https://github.com/glfs-book/advisories">here</a>. The XML is licensed
+      under the MIT license. You may transform and pull the XML how you wish.
+    </p>
+    <h2>
+      Reading the HTML
+    </h2>
+    <p>
+      The following links contain advisories for each supported book:
+    </p>
+    <ul>
+      <li>
+        <a href="glfs.html">GLFS Advisories</a>
+      </li>
+      <li>
+        <a href="slfs.html">SLFS Advisories</a>
+      </li>
+    </ul>
+  </body>
+</html>
