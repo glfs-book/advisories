@@ -4,6 +4,26 @@
 <bookver ver="13.0">
 
   <adv type="sec">
+    <topic>yt-dlp</topic>
+    <ver>2026.07.04</ver>
+    <rate>High</rate>
+    <date>August 25th, 2026</date>
+    <des>
+      A security vulnerability was fixed that could allow for command injection
+      via improper sanitization of output when using the
+      <option>--write-link</option> option.
+    </des>
+    <id>2026-55404</id>
+    <action>
+      If you use the <option>--write-link</option> option, or use scripts that
+      do use the <option>--write-link</option> option, it is recommended
+      to update by following the <ulink
+      url="https://linuxfromscratch.org/slfs/view/dev/general/yt-dlp.html">
+      yt-dlp installation page</ulink>.
+    </action>
+  </adv> 
+
+  <adv type="sec">
     <topic>socat</topic>
     <ver>1.8.1.3</ver>
     <rate>Critical</rate>
