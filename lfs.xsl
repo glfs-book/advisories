@@ -11,6 +11,7 @@
 <title><xsl:value-of select="translate(book/@type, $smallcase, $uppercase)"/>
        Advisories</title>
 <link rel="stylesheet" type="text/css" href="lfs.css"/>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 </head>
 <body>
   <h1><xsl:value-of select="translate(book/@type, $smallcase, $uppercase)"/> Advisories</h1>
