@@ -4,6 +4,26 @@
 <bookver ver="13.0">
 
   <adv type="sec">
+    <topic>tornado</topic>
+    <ver>6.5.8</ver>
+    <rate>High</rate>
+    <date>August 25th, 2026</date>
+    <des>
+      Three security vulnerabilities were fixed that could allow for denial of
+      service (DOS), excessive memory consumption, and invalid characters not
+      being restricted.
+    </des>
+    <id type="ghsa" prefix="tornadoweb/tornado">wwv5-g3v4-889x</id>
+    <id type="ghsa" prefix="tornadoweb/tornado">mpf4-983q-p7j4</id>
+    <id type="ghsa" prefix="tornadoweb/tornado">8423-8fgw-73vq</id>
+    <action>
+      Update by following the <ulink
+      url="https://linuxfromscratch.org/slfs/view/dev/general/python-dependencies.html#tornado">
+      tornado installation page</ulink>.
+    </action>
+  </adv>
+
+  <adv type="sec">
     <topic>OSTree</topic>
     <ver>2026.3</ver>
     <rate>Medium</rate>
