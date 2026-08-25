@@ -4,6 +4,31 @@
 <bookver ver="13.0">
 
   <adv type="sec">
+    <topic>NGINX</topic>
+    <ver>1.31.2</ver>
+    <rate>Critical</rate>
+    <date>August 25th, 2026</date>
+    <des>
+      Three security vulnerabilities were fixed that could allow for
+      use-after-free operations, buffer overflows, and buffer overreads.
+      The <filename>ngx_http_v3_module</filename>,
+      <filename>ngx_http_proxy_v2_module</filename>,
+      <filename>ngx_http_grpc_module</filename>, and
+      <filename>ngx_http_charset_module</filename> modules are affected.
+      Without ALSR enabled, these vulnerabilities allow remote and arbitrary
+      code execution (RCE and ACE) on systems hosting NGINX instances.
+    </des>
+    <id>2026-42055</id>
+    <id>2026-42530</id>
+    <id>2026-48142</id>
+    <action>
+      Update <bold>immediately</bold> by following the <ulink
+      url="https://linuxfromscratch.org/slfs/view/dev/server/nginx.html">
+      NGINX installation page</ulink>.
+    </action>
+  </adv>
+
+  <adv type="sec">
     <topic>Go</topic>
     <ver>1.26.4</ver>
     <rate>High</rate>
