@@ -4,6 +4,25 @@
 <bookver ver="13.0">
 
   <adv type="sec">
+    <topic>OSTree</topic>
+    <ver>2026.3</ver>
+    <rate>Medium</rate>
+    <date>August 25th, 2026</date>
+    <des>
+      Two security vulnerabilities were fixed that could allow for denial of
+      service (DOS) and heap buffer overflows. These require the attacker to
+      control the content served by the repository.
+    </des>
+    <id type="ghsa" prefix="ostreedev/ostree">7cgc-gp99-6jmm</id>
+    <id type="ghsa" prefix="ostreedev/ostree">xppc-j946-vcj7</id>
+    <action>
+      Update by following the <ulink
+      url="https://linuxfromscratch.org/slfs/view/dev/general/ostree.html">
+      OSTree installation page</ulink>.
+    </action>
+  </adv>
+
+  <adv type="sec">
     <topic>Flatpak</topic>
     <ver>1.18.1</ver>
     <rate>Critcal</rate>
