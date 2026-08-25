@@ -1,4 +1,6 @@
-all: glfs slfs index
+BASEDIR ?= $(HOME)/public_html/advisories
+
+all: basedir
 
 glfs: glfs.xml lfs.xsl
 	xsltproc -o glfs.html lfs.xsl glfs.xml
@@ -11,6 +13,9 @@ tidy: glfs slfs index
           tidy -config tidy.conf $$filename;        \
           true;                                     \
         done;
+basedir: tidy
+	mkdir -p $(BASEDIR)
+	cp *.html *.css *.svg $(BASEDIR)
 clean:
 	rm -rf *.*html
 

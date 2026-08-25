@@ -23,15 +23,17 @@ This repository supports transforming the XML into HTML.
 
 To do it, you need `xsltproc` from **libxslt**. `tidy` from **tidy-html5** is
 recommended to make the HTML cleaner and get rid of whitespace. `make` is also
-recommended, but HTML generation is easy without it.
+recommended, but HTML generation is easy without it. `tidy` is used by default
+when using `make`.
 
 If you have `make`, run:
 ```Bash
-make &&
-make tidy
+make
 ```
 
-This will generate HTML files, but they aren't moved or copied anywhere.
+This will generate HTML files and copy the output to
+`$(HOME)/public_html/advisories`, which can be overriden with the `BASEDIR`
+variable specifying where the path to where output should be copied to.
 
 If you don't have `make`, run this instead:
 ```Bash

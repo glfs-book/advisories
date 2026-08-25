@@ -3,6 +3,25 @@
 
 <bookver ver="13.0">
 
+  <adv type="sec">
+    <topic>Go</topic>
+    <ver>1.26.4</ver>
+    <rate>High</rate>
+    <date>August 25th, 2026</date>
+    <des>
+      Three security vulnerabilities were fixed that could allow for excessive
+      CPU consumption and injection of misleading content to errors.
+    </des>
+    <id>2026-42504</id>
+    <id>2026-42507</id>
+    <action>
+      Update by following the <ulink
+      url="https://linuxfromscratch.org/slfs/view/dev/general/go.html">
+      Go installation page</ulink>, and reinstall everything that was built
+      with or against the package.
+    </action>
+  </adv>
+
   <adv type="brk">
     <topic>Wayfire, wlroots, and dependencies</topic>
     <date>August 24th, 2026</date>

@@ -41,9 +41,6 @@ jobs:
           pwd
           echo $default-branch
           make
-          make tidy
-          mkdir -vp /home/runner/public_html/advisories
-          cp -v *.html *.css *.svg /home/runner/public_html/advisories/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
