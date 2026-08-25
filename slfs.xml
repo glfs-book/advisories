@@ -4,6 +4,36 @@
 <bookver ver="13.0">
 
   <adv type="sec">
+    <topic>Go</topic>
+    <ver>1.26.6</ver>
+    <rate>Critical</rate>
+    <date>August 25th, 2026</date>
+    <des>
+      Nine security vulnerabilities were fixed that could allow for privilege
+      escalation when using the idna package, buffer overflow, denial of
+      service (DOS), unlimited allocation of resources, arbitrary content
+      injection, cross-site scripting (XSS), stack exhaustion, increased
+      memory allocations, infinite operations, undetectable malicious module
+      content, and GOSUMDB check bypassing.
+    </des>
+    <id>2026-39821</id>
+    <id>2026-46600</id>
+    <id>2026-56853</id>
+    <id>2026-56858</id>
+    <id>2026-56859</id>
+    <id>2026-56860</id>
+    <id>2026-56862</id>
+    <id>2026-56864</id>
+    <id>2026-56865</id>
+    <action>
+      Update <bold>immediately</bold> by following the <ulink
+      url="https://linuxfromscratch.org/slfs/view/dev/general/go.html">
+      Go installation page</ulink>, and reinstall everything that was built
+      with or against the package.
+    </action>
+  </adv>
+
+  <adv type="sec">
     <topic>yt-dlp</topic>
     <ver>2026.07.04</ver>
     <rate>High</rate>
@@ -314,9 +344,9 @@
       Ten security vulnerabilities were fixed that could allow for the
       unconditional symlink following, incorrect tracking of JavaScript
       template literal contexts, improper applying of excluded DNS constraints
-      in certificates to wildcard domains, bypassal of overlap checking for
+      in certificates to wildcard domains, bypassing of overlap checking for
       no-op interface conversions, possible memory corription, unbounded
-      allocation, connection deadlocks, trust layer bypassal, and denial of
+      allocation, connection deadlocks, trust layer bypassing, and denial of
       service (DOS). Multiple Go components are affected.
     </des>
     <id>2026-27140</id>
