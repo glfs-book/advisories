@@ -4,6 +4,24 @@
 <bookver ver="13.0">
 
   <adv type="sec">
+    <topic>htop</topic>
+    <ver>3.5.3</ver>
+    <rate>High</rate>
+    <date>August 25th, 2026</date>
+    <des>
+      Three security vulnerabilities were fixed that could allow for
+      segmentation faults, improper Clang MSan sanitization, and out-of-bounds
+      access.
+    </des>
+    <id>2024-37676</id>
+    <action>
+      Update by following the <ulink
+      url="https://linuxfromscratch.org/slfs/view/dev/general/htop.html">
+      htop installation page</ulink>.
+    </action>
+  </adv>
+
+  <adv type="sec">
     <topic>tornado</topic>
     <ver>6.5.8</ver>
     <rate>High</rate>
