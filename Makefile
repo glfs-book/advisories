@@ -10,9 +10,9 @@ index: index.html.in
 	cp index.html.in index.html
 tidy: glfs slfs index
 	for filename in `find . -name "*.html"`; do \
-          tidy -config tidy.conf $$filename;        \
-          true;                                     \
-        done;
+  tidy -config tidy.conf $$filename;         \
+  true;                                     \
+done;
 basedir: tidy
 	mkdir -p $(BASEDIR)
 	cp *.html *.css *.svg $(BASEDIR)

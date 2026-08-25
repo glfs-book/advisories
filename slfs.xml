@@ -4,6 +4,37 @@
 <bookver ver="13.0">
 
   <adv type="sec">
+    <topic>Flatpak</topic>
+    <ver>1.18.1</ver>
+    <rate>Critcal</rate>
+    <date>August 25th, 2026</date>
+    <des>
+      Ten security vulnerabilities were fixed that could allow for full sandbox
+      escapes, local root privilege escalations, arbitrary root writing,
+      arbitrary host file reading, path traversal, buffer overflows,
+      fixed-filename writing to arbitrary locations, extension metadata path
+      traversal, host filesystem probing, unintended mount locations,
+      anti-downgrade bypassing, and downgrading system apps by unprivileged
+      users.
+    </des>
+    <id type="ghsa" prefix="flatpak/flatpak">8688-9x26-hhxj</id>
+    <id type="ghsa" prefix="flatpak/flatpak">qrwq-7qwx-q9rp</id>
+    <id type="ghsa" prefix="flatpak/flatpak">fqx6-vh4p-42cg</id>
+    <id type="ghsa" prefix="flatpak/flatpak">8qxj-x646-phcm</id>
+    <id type="ghsa" prefix="flatpak/flatpak">9rww-v4mm-x4jg</id>
+    <id type="ghsa" prefix="flatpak/flatpak">v2gw-v9h5-9q4x</id>
+    <id type="ghsa" prefix="flatpak/flatpak">jr92-2v97-wgvc</id>
+    <id type="ghsa" prefix="flatpak/flatpak">99wv-m8rp-g58x</id>
+    <id type="ghsa" prefix="flatpak/flatpak">w69g-9x8j-7p8f</id>
+    <id type="ghsa" prefix="flatpak/flatpak">q4gr-vc25-57m5</id>
+    <action>
+      Update <bold>immediately</bold> by following the <ulink
+      url="https://linuxfromscratch.org/slfs/view/dev/general/flatpak.html">
+      Flatpak installation page</ulink>.
+    </action>
+  </adv>
+
+  <adv type="sec">
     <topic>NGINX</topic>
     <ver>1.31.3</ver>
     <rate>Critcal</rate>
@@ -193,9 +224,9 @@
       no-progression disassembly, parser desynchronization, and NULL pointer
       dereferences.
     </des>
-    <id type="ghsa" prefix="capstone-engine/capstone/security/">289w-cm54-fgrm</id>
-    <id type="ghsa" prefix="capstone-engine/capstone/security/">5m9f-vqcm-g5pr</id>
-    <id type="ghsa" prefix="capstone-engine/capstone/security/">jrw4-wj52-2vw8</id>
+    <id type="ghsa" prefix="capstone-engine/capstone">289w-cm54-fgrm</id>
+    <id type="ghsa" prefix="capstone-engine/capstone">5m9f-vqcm-g5pr</id>
+    <id type="ghsa" prefix="capstone-engine/capstone">jrw4-wj52-2vw8</id>
     <action>
       Update by following the <ulink
       url="https://linuxfromscratch.org/slfs/view/dev/general/capstone.html">

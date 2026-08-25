@@ -22,9 +22,9 @@
     the book.
   </p>
   <p>
-    Sometimes, not every security vulnerability for an advisory will be
-    available. Sometimes, upstream does not issue an ID with security
-    authority, like a CVE. Sometimes, they don't wish to talk about the
+    In some cases, not every security vulnerability for an advisory will be
+    available. Either upstream does not issue an ID with security
+    authority, like a CVE, or they don't wish to talk about the
     vulnerability in detail. What's listed is all that can be gathered from
     upstream and GitHub/Mitre/NVD.
   </p>
@@ -103,8 +103,14 @@
         <xsl:for-each select="id">
           <xsl:choose>
             <xsl:when test="@type='ghsa'">
-              <a href="https://github.com/{@prefix}advisories/GHSA-{.}">
-                GHSA-<xsl:value-of select="."/></a><xsl:choose>
+              <xsl:choose><xsl:when test="@prefix">
+                <a href="https://github.com/{@prefix}/security/advisories/GHSA-{.}">
+                  GHSA-<xsl:value-of select="."/></a>
+              </xsl:when><xsl:otherwise>
+                <a href="https://github.com/advisories/GHSA-{.}">
+                  GHSA-<xsl:value-of select="."/></a>
+              </xsl:otherwise></xsl:choose>
+                <xsl:choose>
                 <xsl:when
                 test="last() - position() = 1"><xsl:choose><xsl:when
                 test="last() = 2"></xsl:when><xsl:otherwise>,</xsl:otherwise></xsl:choose>
