@@ -3,6 +3,23 @@
 
 <bookver ver="13.0">
 
+  <adv type="brk">
+    <topic>Wayfire, wlroots, and dependencies</topic>
+    <date>August 24th, 2026</date>
+    <des>
+      LXQt-Wayland-Session can utilize multiple Wayland compositors. The most
+      simple one to use is Wayfire. Since LXQT-Wayland-Session is in BLFS,
+      Wayfire was moved to BLFS. As a result, its dependencies like wlroots
+      were also moved to BLFS as a consequence. The following have been moved:
+      nlohmann-json, yyjson, xcb-util-errors (XCB Utilities), libliftoff,
+      seatd, wlroots, xdg-desktop-portal-wlr, Wayfire, and
+      wayfire-plugins-extra.
+    </des>
+    <action>
+      Read BLFS to follow updates for the moved packages.
+    </action>
+  </adv>
+
   <adv type="sec">
     <topic>tornado</topic>
     <ver>6.5.7</ver>
