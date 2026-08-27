@@ -4,6 +4,16 @@
 <bookver ver="13.0">
 
   <adv type="brk">
+    <topic>libclc</topic>
+    <date>August 27th, 2026</date>
+    <des>
+      Mesa prefers its own fork of libclc for only D3D and RustICL. The book
+      doesn't enable either. The package no longer has much use in the book, so
+      it has been removed. No other package used libclc.
+    </des>
+  </adv>
+
+  <adv type="brk">
     <topic>OpenCL and Ruby</topic>
     <date>May 29th, 2026</date>
     <des>
