@@ -1,6 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <book type="slfs">
 
+<bookver ver="13.1">
+
+  <adv type="sec">
+    <topic>OpenJDK</topic>
+    <ver>17.0.20.1-ga</ver>
+    <rate>High</rate>
+    <date>September 2nd, 2026</date>
+    <des>
+      Seventeen security vulnerabilities were fixed that could allow for
+      exploitation in the JAXP, networking, JSSE, JGSS, 2D (FreeType,
+      Little-CMS 2, and general), libraries, security, and ImageIO component
+      APIs. A large number of the vulnerabilities are remotely exploitable,
+      without any authentication required.
+    </des>
+    <id>2026-22007</id>
+    <id>2026-22013</id>
+    <id>2026-22016</id>
+    <id>2026-22018</id>
+    <id>2026-22021</id>
+    <id>2026-23865</id>
+    <id>2026-34282</id>
+    <id>2026-34628</id>
+    <id>2026-41254</id>
+    <id>2026-46917</id>
+    <id>2026-46968</id>
+    <id>2026-47010</id>
+    <id>2026-47021</id>
+    <id>2026-47027</id>
+    <id>2026-47059</id>
+    <id>2026-47063</id>
+    <id>2026-60147</id>
+    <action>
+      Update by following the <ulink
+      url="https://linuxfromscratch.org/slfs/view/dev/general/openjdk.html">
+      OpenJDK installation page</ulink>.
+    </action>
+  </adv>
+
+</bookver>
+
 <bookver ver="13.0">
 
   <adv type="sec">
