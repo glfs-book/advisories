@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <book type="glfs">
 
+<bookver ver="13.1">
+
+  <adv type="sec">
+    <topic>NVIDIA</topic>
+    <ver>615.71.09</ver>
+    <rate>High</rate>
+    <date>September 19th, 2026</date>
+    <des>
+      A security vulnerability was fixed that could allow for a file descriptor
+      (fd) leak when unloading the <filename>libGLX_nvidia</filename> Vulkan
+      driver. If reports can be attributed properly, this possibly causes
+      terminals and/or terminal emulators to crash. This is still unconfirmed.
+      File descriptor leaks can starve resources which can cause other harmful
+      effects, but it's unclear what the full ramifications of this leak are.
+    </des>
+    <action>
+      Update by following the <ulink
+      url="https://linuxfromscratch.org/glfs/view/dev/core/nvidia.html">
+      NVIDIA installation page</ulink>.
+    </action>
+  </adv>
+
+</bookver>
+
 <bookver ver="13.0">
 
   <adv type="brk">
