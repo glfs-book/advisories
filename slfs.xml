@@ -4,6 +4,28 @@
 <bookver ver="13.1">
 
   <adv type="sec">
+    <topic>tornado</topic>
+    <ver>6.5.10</ver>
+    <rate>High</rate>
+    <date>November 22nd, 2026</date>
+    <des>
+      Five security vulnerabilities were fixed that could allow for symlink
+      traversal, high request sizes, high amount of responses, and long URL
+      lengths.
+    </des>
+    <des>
+      There are only two assigned security IDs.
+    </des>
+    <id type="ghsa" prefix="tornadoweb/tornado">chx6-46f5-w4vp</id>
+    <id type="ghsa" prefix="tornadoweb/tornado">3hv7-mjh2-fv65</id>
+    <action>
+      Update by following the <ulink
+      url="https://linuxfromscratch.org/slfs/view/dev/general/python-dependencies.html#tornado">
+      tornado installation page</ulink>.
+    </action>
+  </adv>
+
+  <adv type="sec">
     <topic>libunbound</topic>
     <ver>1.25.2</ver>
     <rate>High</rate>
