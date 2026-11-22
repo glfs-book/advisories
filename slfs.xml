@@ -4,6 +4,23 @@
 <bookver ver="13.1">
 
   <adv type="sec">
+    <topic>NGINX</topic>
+    <ver>1.31.6</ver>
+    <rate>Medium</rate>
+    <date>November 22nd, 2026</date>
+    <des>
+      A security vulnerability was fixed that could allow for a buffer overflow
+      in the <filename>ngx_http_v3_module</filename>.
+    </des>
+    <id>2026-90439</id>
+    <action>
+      Update by following the <ulink
+      url="https://linuxfromscratch.org/slfs/view/dev/server/nginx.html">
+      NGINX installation page</ulink>.
+    </action>
+  </adv>
+
+  <adv type="sec">
     <topic>tornado</topic>
     <ver>6.5.10</ver>
     <rate>High</rate>
