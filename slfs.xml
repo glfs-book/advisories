@@ -4,6 +4,34 @@
 <bookver ver="13.1">
 
   <adv type="sec">
+    <topic>Flatpak</topic>
+    <ver>1.18.4</ver>
+    <rate>High</rate>
+    <date>November 22nd, 2026</date>
+    <des>
+      Six security vulnerabilities were fixed that could allow for
+      privileged overwriting and deletion of files, visible authentication
+      tokens, unrestricted permissions on temporary repository directories,
+      denial of service, and unintended interactions with host services.
+    </des>
+    <des>
+      The xdg-dbus-proxy subproject also updated to fix some security
+      vulnerabilities.
+    </des>
+    <id type="ghsa" prefix="flatpak/flatpak">8xgq-v545-vgvf</id>
+    <id type="ghsa" prefix="flatpak/flatpak">5p67-xh8x-rq54</id>
+    <id type="ghsa" prefix="flatpak/flatpak">7rvf-rqr3-43j4</id>
+    <id type="ghsa" prefix="flatpak/flatpak">r9w3-qx54-qvc8</id>
+    <id type="ghsa" prefix="flatpak/flatpak">v64f-hrwr-j4vh</id>
+    <id type="ghsa" prefix="flatpak/flatpak">f3p8-vr7v-gxf2</id>
+    <action>
+      Update by following the <ulink
+      url="https://linuxfromscratch.org/slfs/view/dev/general/flatpak.html">
+      Flatpak installation page</ulink>.
+    </action>
+  </adv>
+
+  <adv type="sec">
     <topic>NGINX</topic>
     <ver>1.31.7</ver>
     <rate>Critical</rate>
