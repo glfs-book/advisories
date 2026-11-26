@@ -30,7 +30,7 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt update
-          sudo apt -y install libxml2 libxml2-utils libxslt1.1 xsltproc tidy make
+          sudo apt -y install libxml2-dev libxml2-utils libxslt1.1 xsltproc tidy make
       - name: Checkout
         uses: actions/checkout@v6
       - name: Setup Pages
