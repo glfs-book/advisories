@@ -97,9 +97,11 @@
 
   <adv type="sec">
     <topic>libunbound</topic>
-    <ver>1.25.2</ver>
+    <ver>1.26.2</ver>
     <rate>High</rate>
     <date>October 23rd, 2026</date>
+    <update>November 27th, 2026</update>
+    <reason>corrected libunbound version to 1.26.2</reason>
     <des>
       Five security vulnerabilities were fixed that could allow for bypassing
       configured island trust anchors, exploitation of possibly insecure
